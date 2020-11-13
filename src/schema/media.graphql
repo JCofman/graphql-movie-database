@@ -17,7 +17,7 @@ interface Media @cacheControl(maxAge: 10000) {
   crew(departments: [CrewDepartment!]): [CrewCredit!]!
   genres: [Genre!]!
   homepage: String
-  id: ID!
+  id: String!
   mediaType: MediaType!
   originalLanguage: String!
   originalTitle: String!
