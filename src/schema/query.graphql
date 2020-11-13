@@ -21,7 +21,7 @@ type Query {
   """
   Gets a single Movie by ID.
   """
-  movie(id: ID!): Movie
+  movie(id: String!): Movie
 
   """
   Gets a single TV show by ID
