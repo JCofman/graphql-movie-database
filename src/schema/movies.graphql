@@ -2,7 +2,7 @@
 # import Media, AccountStates from "media.graphql"
 # import Video, VideoType from "videos.graphql"
 
-type Movie implements Media @cacheControl(maxAge: 10000) {
+type Movie implements Media {
   # ===================================================================
   #  Media fields
   # ===================================================================

@@ -9,7 +9,7 @@ Media is the base type for Movie and TV Show. It defines the common set of
 fields shared by both Movie and Show.
 TODO: Come up with a better name
 """
-interface Media @cacheControl(maxAge: 10000) {
+interface Media {
   accountStates: AccountStates
   backdropPath: String
   backdrops: [Image!]!

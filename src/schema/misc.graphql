@@ -1,14 +1,14 @@
-type Genre @cacheControl(maxAge: 10000) {
+type Genre {
   id: Int!
   name: String!
 }
 
-type Country @cacheControl(maxAge: 10000) {
+type Country {
   iso_3166_1: String!
   name: String!
 }
 
-type Language @cacheControl(maxAge: 10000) {
+type Language {
   iso_639_1: String!
   name: String!
 }

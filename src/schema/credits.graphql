@@ -22,7 +22,7 @@ enum CrewDepartment {
 # types for person's credits and media item's credits.
 
 "This is the base type for CastCredit and CrewCredit."
-interface Credit @cacheControl(maxAge: 10000) {
+interface Credit {
   creditType: CreditType!
   "The movie or tv show"
   media: Media!

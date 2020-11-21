@@ -23,7 +23,6 @@ const server = new ApolloServer({
   playground,
   mocks: false,
   tracing: true,
-  cacheControl: true,
   introspection: true,
   engine: { apiKey: process.env.ENGINE_API_KEY },
   dataSources: () => ({

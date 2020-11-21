@@ -3,7 +3,7 @@
 # import Media, AccountStates from "media.graphql"
 # import Video,  VideoType from "videos.graphql"
 
-type Show implements Media @cacheControl(maxAge: 10000) {
+type Show implements Media {
   # ===================================================================
   #  Media fields
   # ===================================================================
@@ -48,7 +48,7 @@ type Show implements Media @cacheControl(maxAge: 10000) {
 """
 An individual season of a TV Show.
 """
-type Season @cacheControl(maxAge: 10000) {
+type Season {
   airDate: String!
   episodeCount: Int!
   id: ID!
@@ -70,7 +70,7 @@ type Season @cacheControl(maxAge: 10000) {
 An individual episode of a TV show. It includes details that are specific
 to the episode, such as special guests, crew, description.
 """
-type Episode @cacheControl(maxAge: 10000) {
+type Episode {
   airDate: String!
   episodeNumber: Int!
   id: ID!

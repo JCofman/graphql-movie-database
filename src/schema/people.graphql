@@ -1,7 +1,7 @@
 # import Media from "media.graphql"
 # import CastCredit, CrewCredit from "credits.graphql"
 
-type Person @cacheControl(maxAge: 10000) {
+type Person {
   alsoKnownAs: [String!]
   biography: String
   birthday: String
@@ -21,7 +21,7 @@ type Person @cacheControl(maxAge: 10000) {
 """
 The combined movie and TV credits for a single person.
 """
-type Filmography @cacheControl(maxAge: 10000) {
+type Filmography {
   cast: [CastCredit!]!
   crew: [CrewCredit!]!
 }

@@ -1,4 +1,4 @@
-type Company @cacheControl(maxAge: 10000) {
+type Company {
   id: ID!
   logoPath: String
   name: String!
