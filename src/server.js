@@ -1,5 +1,5 @@
 require('dotenv').config() // Load environment variables
-const { ApolloServer } = require('apollo-server')
+const { ApolloServer, makeExecutableSchema } = require('apollo-server')
 const path = require('path')
 const { importSchema } = require('@lukepeavey/graphql-import')
 const jwt = require('jsonwebtoken')
@@ -12,10 +12,14 @@ const resolvers = require('./resolvers')
 // import schema using graphql-import
 const typeDefs = importSchema(path.join(__dirname, 'schema/index.graphql'))
 
+const executableSchema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+})
+
 // Create the Apollo Server instance
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema: executableSchema,
   playground,
   mocks: false,
   tracing: true,
